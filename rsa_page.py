@@ -25,11 +25,11 @@ def app(rsa):
         """
     )
 
-    cifrado, descifrado = st.columns(2)
+    cifrado_rsa, descifrado_rsa = st.columns(2)
 
-    with cifrado:
+    with cifrado_rsa:
         st.header("Encriptación")
-        text_input = st.text_input("Introduce el mensaje a cifrar: ")
+        text_input = st.text_input("Introduce el mensaje a cifrar: ", key="cif_rsa")
 
         if text_input:
             mensaje_cifrado = rsa.encriptar(text_input)
@@ -41,9 +41,9 @@ def app(rsa):
             else:
                 st.write(f"El mensaje cifrado es {mensaje_cifrado}")
 
-    with descifrado:
+    with descifrado_rsa:
         st.header("Desencriptación")
-        text_input = st.text_input("Introduce el mensaje a decifrar: ")
+        text_input = st.text_input("Introduce el mensaje a decifrar: ", key="dec_rsa")
 
         if text_input:
             mensaje_descifrado = rsa.desencriptar(text_input)
