@@ -32,4 +32,5 @@ def app():
         rsa_page.app(rsa)
 
 
-app()
+if __name__ == "__main__":
+    app()
