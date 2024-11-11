@@ -8,8 +8,8 @@ import numpy as np
 
 
 class RSA:
-    p: int = 67
-    q: int = 47
+    p: int = 1013
+    q: int = 1019
 
     def __init__(self):
         self.phi = (self.p - 1) * (self.q - 1)
